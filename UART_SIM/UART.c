@@ -11,10 +11,7 @@ void UART_SIM_STAT(UART_Tran *T,UART_Recv *R)
 			T->SBUF = DatTran[++SpTran];
 			T->BitSndBuf = ((uint16_t)(T->SBUF << 1)) | 0x0200;  //0x0200  1 stop bit
 		}
-		else
-		{
-			UART_SCON &= ~TIEN;
-		}
+		else UART_SCON &= ~TIEN;
 	}
 	
 	if(!(UART_ISR&RI_Bit))  //RXD
