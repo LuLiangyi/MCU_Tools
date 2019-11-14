@@ -1,5 +1,8 @@
 #include "UART.h"
 
+uint8_t UART_SCON;
+uint8_t UART_ISR;
+
 void UART_SIM_STAT(UART_Tran *T,UART_Recv *R)
 {
 	if(!(UART_ISR&TI_Bit) && UART_SCON&TIEN) UART_ISR |= TI_Bit; 

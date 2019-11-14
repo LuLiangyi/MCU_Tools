@@ -21,11 +21,11 @@ typedef struct{
 	uint8_t sample;  
 }UART_Recv;
 
-uint8_t UART_SCON;
+
 #define RIEN (1<<0)
 #define TIEN (1<<1)
 
-uint8_t UART_ISR;
+
 #define RI_Bit (1<<0)
 #define TI_Bit (1<<1)
 #define RI_Byte (1<<2)
